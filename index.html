@@ -23,25 +23,28 @@
   </head>
 
   <body>
+    <!-- sign up card -->
     <main class="container">
       <section class="card1">
         <h1 class="title">Stay updated!</h1>
-        <p class="message">
+        <p class="join-message">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
         <div class="list-container">
           <ul class="list-items">
             <li class="item">
-              <span class="space-item"
-                >Product discovery and building what matters</span
-              >
+              <span class="space-item">
+                Product discovery and building what matters
+              </span>
             </li>
             <li class="item">
-              <span class="space-item"
-                >Measuring to ensure updates are a success</span
-              >
+              <span class="space-item">
+                Measuring to ensure updates are a success
+              </span>
             </li>
-            <li class="item"><span class="space-item">And much more!</span></li>
+            <li class="item">
+              <span class="space-item"> And much more! </span>
+            </li>
           </ul>
         </div>
         <form
@@ -71,6 +74,24 @@
           src="./assets/images/illustration-sign-up-desktop.svg"
           alt=""
         />
+      </section>
+
+      <!-- sucessfully subscribed card -->
+      <section class="success" id="success">
+        <img
+          src="./assets/images/icon-success.svg"
+          class="icon-success"
+          alt=""
+        />
+        <h1 class="thanks-message">Thanks for subscribing!</h1>
+        <p class="confirmation-message">
+          A confirmation email has been sent to
+          <b id="received-email">lala@lala.com</b>. Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+        <button id="dismiss-message" class="btn btn-dark">
+          Dismiss message
+        </button>
       </section>
     </main>
   </body>
