@@ -24,7 +24,7 @@
 
   <body>
     <!-- sign up card -->
-    <main class="container">
+    <main class="container" id="main-card">
       <section class="card1">
         <h1 class="title">Stay updated!</h1>
         <p class="join-message">
@@ -47,23 +47,15 @@
             </li>
           </ul>
         </div>
-        <form
-          class="newsletter-form"
-          action="submit"
-          method="get"
-          id="newsletter-form"
-        >
-          <div class="form-group">
-            <label class="email-label" for="email-input">Email address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="user-email"
-              aria-describedby="user-email"
-              placeholder="Enter email"
-            />
-          </div>
-          <button type="button" class="btn btn-dark">
+        <form class="newsletter-form" id="newsletter-form">
+          <label id="email-label" class="email-label"> Email address </label>
+          <input
+            type="email"
+            class="form-control"
+            id="user-email"
+            placeholder="Enter email"
+          />
+          <button type="submit" class="btn" id="button">
             Subscribe to monthly newsletter
           </button>
         </form>
@@ -75,24 +67,18 @@
           alt=""
         />
       </section>
-
-      <!-- sucessfully subscribed card -->
-      <section class="success" id="success">
-        <img
-          src="./assets/images/icon-success.svg"
-          class="icon-success"
-          alt=""
-        />
-        <h1 class="thanks-message">Thanks for subscribing!</h1>
-        <p class="confirmation-message">
-          A confirmation email has been sent to
-          <b id="received-email">lala@lala.com</b>. Please open it and click the
-          button inside to confirm your subscription.
-        </p>
-        <button id="dismiss-message" class="btn btn-dark">
-          Dismiss message
-        </button>
-      </section>
     </main>
+
+    <!-- sucessfully subscribed card -->
+    <section class="success" id="success-card">
+      <img src="./assets/images/icon-success.svg" class="icon-success" alt="" />
+      <h1 class="thanks-message">Thanks for subscribing!</h1>
+      <p class="confirmation-message">
+        A confirmation email has been sent to
+        <b id="show-email">lala@lala.com</b>. Please open it and click the
+        button inside to confirm your subscription.
+      </p>
+      <button id="dismiss-message" class="btn btn-dark">Dismiss message</button>
+    </section>
   </body>
 </html>
