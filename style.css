@@ -16,7 +16,7 @@
   /*effects*/
   --Brown: hsla(4, 100%, 67%, 0.178);
   --Coral: hsl(346, 100%, 66%);
-  --Coral-light: hsl(0, 93%, 79%);
+  --Coral-light: hsl(0, 83%, 84%);
 }
 
 @font-face {
@@ -129,4 +129,26 @@ li::before {
 .btn:hover {
   background-image: linear-gradient(to left, var(--Tomato), var(--Coral));
   box-shadow: -5px 15px 30px var(--Coral-light);
+}
+
+.success {
+  width: 480px;
+  background-color: var(--White);
+  border-radius: 10px;
+  height: 620px;
+  padding: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.thanks-message {
+  font-size: 56px;
+  font-family: robotoBoldFont;
+  margin: 50px 0px 0px 0px;
+}
+
+.confirmation-message {
+  font-size: 16px;
+  font-family: robotoRegularFont;
+  margin: 50px 0px 90px 0px;
 }
