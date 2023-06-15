@@ -32,11 +32,7 @@
         </p>
         <div class="list-container">
           <ul class="list-items">
-            <li class="item">
-              <span class="space-item">
-                Product discovery and building what matters
-              </span>
-            </li>
+            <li class="item">Product discovery and building what matters</li>
             <li class="item">
               <span class="space-item">
                 Measuring to ensure updates are a success
@@ -48,9 +44,12 @@
           </ul>
         </div>
         <form class="newsletter-form" id="newsletter-form">
-          <label id="email-label" class="email-label"> Email address </label>
+          <label id="email-label" class="email-label" for="user-email">
+            Email address
+          </label>
           <input
             type="email"
+            name="user-email"
             class="form-control"
             id="user-email"
             placeholder="Enter email"
@@ -67,6 +66,13 @@
           alt=""
         />
       </section>
+      <section class="cardmobile" style="display: none">
+        <img
+          class="illustrationMob"
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt=""
+        />
+      </section>
     </main>
 
     <!-- sucessfully subscribed card -->
@@ -80,5 +86,6 @@
       </p>
       <button id="dismiss-message" class="btn btn-dark">Dismiss message</button>
     </section>
+    <script src="./index.js"></script>
   </body>
 </html>
