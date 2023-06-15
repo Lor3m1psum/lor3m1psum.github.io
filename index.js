@@ -1,15 +1,15 @@
+const mainCard = document.getElementById("main-card");
+const successCard = document.getElementById("success-card");
+const dismissMsg = document.getElementById("dismiss-message");
+
 const buttonSubmit = document.getElementById("button");
 const emailLabel = document.getElementById("email-label");
 const showEmail = document.getElementById("show-email");
 
 const invalidSpan = document.createElement("span");
-invalidSpan.style.color = "hsl(4, 100%, 67%)";
-invalidSpan.innerHTML = "Valid email required";
+invalidSpan.setAttribute("class", "invalidStyle");
+invalidSpan.textContent = "Valid email required";
 const validationRgx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-const mainCard = document.getElementById("main-card");
-const successCard = document.getElementById("success-card");
-const dismissMsg = document.getElementById("dismiss-message");
 
 buttonSubmit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -33,7 +33,8 @@ function verifyEmail(userEmail) {
   }
 }
 
-dismissMsg.addEventListener("click", () => {
+dismissMsg.addEventListener("click", (e) => {
+  e.preventDefault();
   mainCard.style.display = "flex";
   successCard.style.display = "none";
 });
