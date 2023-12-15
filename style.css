@@ -74,6 +74,7 @@ body {
 }
 
 .join-message {
+  font-size: medium;
   color: var(--Dark-Slate-Grey);
   margin-bottom: 15px;
 }
@@ -83,20 +84,17 @@ ul {
   margin: 20px 0 30px 0;
   color: var(--Dark-Slate-Grey);
   padding: 0;
-}
-li.item {
-  margin-bottom: 12px;
-  margin-left: 15px;
+  font-size: small;
 }
 
-span.space-item {
-  position: relative;
-  margin: 15px;
+li.item {
+  margin-bottom: 12px;
 }
 
 li::before {
   vertical-align: middle;
   content: url(./assets/images/icon-list.svg);
+  margin-right: 15px;
 }
 
 .email-label {
@@ -111,12 +109,16 @@ li::before {
   justify-content: flex-start;
 }
 
-.form-control {
-  width: 376px;
+.form {
   height: 56px;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #9294a0;
+  width: 100%;
 }
 
-.form-control:focus {
+.form:focus {
   border-color: var(--Dark-Slate-Grey);
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -131,7 +133,7 @@ li::before {
   border: none;
   margin: 25px 0 25px 0;
   background-color: var(--Dark-Slate-Grey);
-  width: 376px;
+  width: 100%;
   height: 56px;
   cursor: pointer;
   transition: 0.8s ease;
@@ -148,12 +150,19 @@ li::before {
   width: 100%;
 }
 
-.success {
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.success-card {
   flex-direction: column;
   width: 470px;
   background-color: var(--White);
   border-radius: 36px;
-  display: none;
   height: 550px;
   padding: 44px;
   justify-content: flex-start;
@@ -226,9 +235,6 @@ li::before {
     font-size: 13px;
   }
 
-  span.space-item {
-    margin: 5px;
-  }
   .confirmation-message {
     margin-bottom: 140px;
     font-size: 13px;
@@ -244,23 +250,9 @@ li::before {
     margin: 0%;
   }
 
-  .success {
-    width: 360px;
-    border-radius: 0;
-    max-height: 550px;
-    border-radius: 0;
-    padding: 15px;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
   .btn {
     position: relative;
     bottom: -20px;
-    width: 300px;
-  }
-
-  .form-control {
     width: 300px;
   }
 }
