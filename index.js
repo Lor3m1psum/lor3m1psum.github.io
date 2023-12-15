@@ -26,8 +26,9 @@ function verifyEmail(userEmail) {
       userEmail.classList.remove("invalidEmail");
       emailLabel.removeChild(invalidSpan);
     }
-    mainCard.style.display = "none";
-    successCard.style.display = "flex";
+    mainCard.classList.add("hide");
+    successCard.classList.remove("hide");
+    successCard.classList.add("show");
     showEmail.innerHTML = userEmail.value;
     userEmail.value = "";
   }
