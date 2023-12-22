@@ -29,7 +29,7 @@ function verifyEmail(userEmail) {
     mainCard.classList.add("hide");
     successCard.classList.remove("hide");
     successCard.classList.add("show");
-    showEmail.innerHTML = userEmail.value;
+    showEmail.textContent = userEmail.value;
     userEmail.value = "";
   }
 }

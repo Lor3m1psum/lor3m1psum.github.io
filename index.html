@@ -19,7 +19,7 @@
   <body>
     <!-- sign up card -->
     <main class="container" id="main-card">
-      <section class="card1">
+      <section class="card-content">
         <h1 class="title">Stay updated!</h1>
         <p class="join-message">
           Join 60,000+ product managers receiving monthly updates on:
@@ -47,20 +47,18 @@
           </button>
         </form>
       </section>
-      <section class="card2">
+      <figure class="card-image">
         <img
-          class="illustration"
+          class="illustration-desktop"
           src="./assets/images/illustration-sign-up-desktop.svg"
           alt=""
         />
-      </section>
-      <section class="cardmobile" style="display: none">
         <img
-          class="illustrationMob"
+          class="illustration-mobile"
           src="./assets/images/illustration-sign-up-mobile.svg"
           alt=""
         />
-      </section>
+      </figure>
     </main>
 
     <!-- sucessfully subscribed card -->
@@ -69,10 +67,10 @@
       <h1 class="thanks-message">Thanks for subscribing!</h1>
       <p class="confirmation-message">
         A confirmation email has been sent to
-        <b id="show-email">lala@lala.com</b>. Please open it and click the
-        button inside to confirm your subscription.
+        <b id="show-email"></b>. Please open it and click the button inside to
+        confirm your subscription.
       </p>
-      <button id="dismiss-message" class="btn btn-dark">Dismiss message</button>
+      <button id="dismiss-message" class="btn">Dismiss message</button>
     </section>
     <script src="./index.js"></script>
   </body>
