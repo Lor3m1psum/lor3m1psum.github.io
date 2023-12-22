@@ -5,10 +5,6 @@
   font-family: robotoRegularFont;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 :root {
   /*Primary*/
   --Tomato: hsl(4, 100%, 67%);
@@ -46,52 +42,48 @@ body {
 .container {
   background-color: var(--White);
   border-radius: 36px;
-  padding: 30px;
+  padding: 22px;
   display: flex;
-  width: 960px;
   justify-content: space-between;
 }
 
-.main-card {
+.card-content {
   display: flex;
-  justify-content: center;
-}
-
-.card1 {
-  display: flex;
-  padding: 35px;
-  max-width: 480px;
+  padding: 35px 50px;
+  max-width: 30rem;
   flex-direction: column;
   justify-content: start;
 }
 
 .title {
-  font-size: 5.6rem;
+  font-size: 3.6rem;
   font-family: robotoBoldFont;
   color: var(--Dark-Slate-Grey);
   margin-top: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .join-message {
   font-size: medium;
   color: var(--Dark-Slate-Grey);
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style: none;
-  margin: 20px 0 30px 0;
-  color: var(--Dark-Slate-Grey);
-  padding: 0;
-  font-size: small;
-}
-
-li.item {
   margin-bottom: 12px;
 }
 
-li::before {
+ul.list-items {
+  display: block;
+  list-style: none;
+  margin: 25px 0 35px 0;
+  color: var(--Dark-Slate-Grey);
+  padding: 0;
+  font-size: medium;
+}
+
+li.item {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+li.item::before {
   vertical-align: middle;
   content: url(./assets/images/icon-list.svg);
   margin-right: 15px;
@@ -99,7 +91,7 @@ li::before {
 
 .email-label {
   font-family: robotoBoldFont;
-  font-size: 12px;
+  font-size: small;
   color: var(--Dark-Slate-Grey);
 }
 
@@ -111,11 +103,11 @@ li::before {
 
 .form {
   height: 56px;
-  padding: 15px;
-  margin: 15px 0;
+  padding: 12px;
+  margin: 12px 0;
   border-radius: 8px;
   border: 1px solid #9294a0;
-  width: 100%;
+  font-size: medium;
 }
 
 .form:focus {
@@ -127,13 +119,12 @@ li::before {
 
 .btn {
   border-radius: 10px;
-  font-size: 16px;
+  font-size: medium;
   color: var(--White);
   font-family: robotoBoldFont;
   border: none;
-  margin: 25px 0 25px 0;
+  margin: 12px 0 12px 0;
   background-color: var(--Dark-Slate-Grey);
-  width: 100%;
   height: 56px;
   cursor: pointer;
   transition: 0.8s ease;
@@ -146,8 +137,18 @@ li::before {
   color: var(--White);
 }
 
-.illustration {
+.card-image {
+  display: flex;
+  align-self: center;
+  padding-left: 1rem;
+}
+
+.illustration-desktop {
   width: 100%;
+}
+
+.illustration-mobile {
+  display: none;
 }
 
 .show {
@@ -170,13 +171,13 @@ li::before {
 }
 
 .thanks-message {
-  font-size: 56px;
+  font-size: 3.6rem;
   font-family: robotoBoldFont;
   margin: 30px 0px 0px 0px;
 }
 
 .confirmation-message {
-  font-size: 16px;
+  font-size: medium;
   font-family: robotoRegularFont;
   margin: 30px 0px 30px 0px;
 }
@@ -184,7 +185,7 @@ li::before {
 .invalidEmail {
   border: 1px solid var(--Tomato);
   border-radius: 8px;
-  font-size: 16px;
+  font-size: medium;
   outline: none;
   color: var(--Tomato);
   background-color: var(--Brown);
@@ -193,34 +194,38 @@ li::before {
 .invalidStyle {
   color: var(--Tomato);
   padding-left: 190px;
-  font-size: 12px;
+  font-size: small;
   font-family: robotoBoldFont;
 }
 
 @media only screen and (max-width: 990px) {
   .container {
     flex-flow: column-reverse;
-    width: 360px;
-    padding: 15px;
+    justify-content: center;
+    max-width: 20rem;
+    padding: 0px 15px 15px;
     border-radius: 15px;
-    justify-content: flex-start;
   }
 
-  li.item {
-    align-items: flex-start;
+  .card-image {
+    display: flex;
+    max-width: 20rem;
+    justify-content: flex-start;
+    align-self: center;
   }
 
   .title {
-    font-size: 36px;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
   }
 
-  .card1 {
+  .card-content {
     margin: 0;
     padding: 15px;
     max-width: 360px;
   }
 
-  .card2 {
+  .card-image {
     max-width: 350px;
     margin: 0;
     padding: 0;
@@ -228,31 +233,31 @@ li::before {
 
   .join-message {
     max-width: 350px;
-    font-size: 13px;
+    font-size: small;
   }
 
-  ul {
-    font-size: 13px;
+  ul.list-items {
+    font-size: small;
+  }
+
+  li::content {
+    text-align: justify;
   }
 
   .confirmation-message {
-    margin-bottom: 140px;
-    font-size: 13px;
+    margin-bottom: 80px;
+    font-size: small;
   }
 
-  .illustration {
+  .illustration-desktop {
     display: none;
   }
 
-  .illustrationMob {
-    width: 360px;
+  .illustration-mobile {
+    display: flex;
+    align-items: flex-start;
+    max-width: 20rem;
     padding: 0%;
     margin: 0%;
-  }
-
-  .btn {
-    position: relative;
-    bottom: -20px;
-    width: 300px;
   }
 }
