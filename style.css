@@ -45,11 +45,12 @@ body {
   padding: 22px;
   display: flex;
   justify-content: space-between;
+  max-width: 55rem;
 }
 
 .card-content {
   display: flex;
-  padding: 35px 50px;
+  padding: 35px;
   max-width: 30rem;
   flex-direction: column;
   justify-content: start;
@@ -107,6 +108,7 @@ li.item::before {
   margin: 12px 0;
   border-radius: 8px;
   border: 1px solid #9294a0;
+  width: 95%;
   font-size: medium;
 }
 
@@ -126,6 +128,7 @@ li.item::before {
   margin: 12px 0 12px 0;
   background-color: var(--Dark-Slate-Grey);
   height: 56px;
+  width: 95%;
   cursor: pointer;
   transition: 0.8s ease;
   -webkit-transition: 0.8s ease;
@@ -140,7 +143,6 @@ li.item::before {
 .card-image {
   display: flex;
   align-self: center;
-  padding-left: 1rem;
 }
 
 .illustration-desktop {
